@@ -6,13 +6,13 @@
 /*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/02 02:48:13 by pnoronha          #+#    #+#             */
-/*   Updated: 2021/08/05 15:45:54 by pnoronha         ###   ########.fr       */
+/*   Updated: 2021/08/11 19:53:22 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "../libftprintf.h"
+#include "../ft_printf.h"
 
-void	conversion_pointer(s_tab *tab)
+void	conversion_pointer(t_tab *tab)
 {
 	unsigned long	ptr;
 
@@ -27,7 +27,7 @@ void	conversion_pointer(s_tab *tab)
 	tab->length += ft_putnbrBase((long int)ptr, "0123456789abcdef");
 }
 
-void	conversion_unsigned(s_tab *tab)
+void	conversion_unsigned(t_tab *tab)
 {
 	unsigned long long	nbr_long;
 	char				*str;
@@ -39,7 +39,7 @@ void	conversion_unsigned(s_tab *tab)
 	free(str);
 }
 
-void	conversion_hexaDecimal(s_tab *tab)
+void	conversion_hexaDecimal(t_tab *tab)
 {
 	long	hexa;
 

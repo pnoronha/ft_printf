@@ -6,13 +6,13 @@
 /*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 22:23:07 by pnoronha          #+#    #+#             */
-/*   Updated: 2021/08/05 15:59:04 by pnoronha         ###   ########.fr       */
+/*   Updated: 2021/08/11 19:54:34 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include	"../libftprintf.h"
+#include "../ft_printf.h"
 
-void	conversion_character(s_tab *tab)
+void	conversion_character(t_tab *tab)
 {
 	char	character;
 
@@ -20,7 +20,7 @@ void	conversion_character(s_tab *tab)
 	tab->length += write(1, &character, 1);
 }
 
-void	conversion_string(s_tab *tab)
+void	conversion_string(t_tab *tab)
 {
 	char	*str;
 
@@ -29,7 +29,7 @@ void	conversion_string(s_tab *tab)
 	tab->length += ft_strlen(str);
 }
 
-void	conversion_decimal(s_tab *tab)
+void	conversion_decimal(t_tab *tab)
 {
 	char	*str;
 	int		decimal;
