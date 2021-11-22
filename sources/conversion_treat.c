@@ -6,7 +6,7 @@
 /*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/08/01 22:23:07 by pnoronha          #+#    #+#             */
-/*   Updated: 2021/08/11 19:54:34 by pnoronha         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:34:30 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ void	conversion_string(t_tab *tab)
 	char	*str;
 
 	str = va_arg(*tab->args, char *);
+	if (str == NULL)
+	{
+		ft_putstr("(null)");
+		tab->length += ft_strlen("(null)");
+		return ;
+	}
 	ft_putstr(str);
 	tab->length += ft_strlen(str);
 }

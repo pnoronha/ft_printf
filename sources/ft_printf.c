@@ -6,7 +6,7 @@
 /*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/08 02:38:11 by pnoronha          #+#    #+#             */
-/*   Updated: 2021/08/11 20:04:25 by pnoronha         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:38:02 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ int	ft_printf(const char *string, ...)
 	va_start(args, string);
 	string_save = ft_strdup(string);
 	init_struct(&tab, string_save, &args);
-	passThrough_string(&tab);
+	pass_through_string(&tab);
 	va_end(args);
 	free(string_save);
 	return (tab.length);

@@ -6,13 +6,13 @@
 /*   By: pnoronha <pnoronha@student.42lisboa.com    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/07/11 14:48:15 by pnoronha          #+#    #+#             */
-/*   Updated: 2021/08/11 20:07:48 by pnoronha         ###   ########.fr       */
+/*   Updated: 2021/11/22 18:34:27 by pnoronha         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../ft_printf.h"
 
-void	passThrough_string(t_tab *tab)
+void	pass_through_string(t_tab *tab)
 {
 	while (tab->imput[tab->index] != '\0')
 	{
@@ -40,9 +40,9 @@ void	conversion_select(t_tab *tab)
 	if (tab->imput[tab->index] == (char) 'u')
 		conversion_unsigned(tab);
 	if (tab->imput[tab->index] == (char) 'x')
-		conversion_hexaDecimal(tab);
+		conversion_hexadecimal(tab);
 	if (tab->imput[tab->index] == (char) 'X')
-		conversion_hexaDecimal(tab);
+		conversion_hexadecimal(tab);
 	if (tab->imput[tab->index] == (char) '%')
 		tab->length += write(1, &tab->imput[tab->index], 1);
 }
